@@ -39,7 +39,7 @@ SENHA=$(cut -d "|" -f 1 <<< "$SENHA")
 echo  "java InstallALLCerts $DNS $TRUSTSTORE_FILE_PATH changeit"
 if [ -e "$TRUSTSTORE_FILE_PATH" ] ; then 
 
-   $JAVA_CMD InstallALLCerts $DNS "$TRUSTSTORE_FILE_PATH" $SENHA
+   $JAVA_CMD InstallALLCerts $DNS "$TRUSTSTORE_FILE_PATH" $SENHA $1
 
 else 
   echo "..:: O arquivo $TRUSTSTORE_FILE_PATH não existe! ::.."

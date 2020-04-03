@@ -56,22 +56,17 @@ public class InstallALLCerts {
     public static void main(String[] args) throws Exception {
     	
         String host;
-        int port;
-        char[] passphrase;
+        int port = 443;
         String truststoreFilePath;
+        char[] passphrase;
         
-        if ((args.length == 2) || (args.length == 3)){
-            String[] c = args[0].split(":");
-            host = c[0];
-//            port = (c.length == 1) ? 443 : Integer.parseInt(c[1]);
-            port = 443;
-            
+        if (args.length >= 3){
+            host = args[0];
             truststoreFilePath = args[1]; 
-            
-            String p = (args.length == 2) ? "changeit" : args[2];
-            passphrase = p.toCharArray();
-            
-                	
+            passphrase = args[2].toCharArray();
+	    if(args.length == 4){
+               port = Integer.valueOf(args[3]);
+            }
         } else {
             System.out.println("Usage: java InstallCert <host>[:port] <truststoreFilePath> <truststorePasswd>");
             return;
