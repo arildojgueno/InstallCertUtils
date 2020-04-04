@@ -10,7 +10,7 @@ javac InstallAllCerts.java
 or
 
 ```
-`which java` InstallAllCerts.java
+`which javac` InstallAllCerts.java
 ```
 
 After compile you can use .sh utility scripts
