@@ -5,12 +5,12 @@ Work on Linux.
 
 Before use, compile it:
 ```
-javac InstallAllCerts.java
+javac InstallALLCerts.java
 ```
 or
 
 ```
-`which javac` InstallAllCerts.java
+`which javac` InstallALLCerts.java
 ```
 
 After compile you can use .sh utility scripts
